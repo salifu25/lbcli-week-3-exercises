@@ -9,4 +9,4 @@ PUBKEY3="03ce11c7b563c3d7fae916351f234eac5089ad2e42fa9e29a94ee944e00c880c66"
 
 bitcoin-cli -regtest createmultisig 2 \
   "[\"$PUBKEY1\",\"$PUBKEY2\",\"$PUBKEY3\"]" \
-  "p2sh-segwit" | jq -r '.address'
+  "legacy" | jq -r '.address'

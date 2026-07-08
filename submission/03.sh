@@ -8,4 +8,4 @@ PUBKEY4=$(bitcoin-cli -regtest decoderawtransaction "$transaction" | jq -r '.vin
 
 bitcoin-cli -regtest createmultisig 1 \
   "[\"$PUBKEY1\",\"$PUBKEY2\",\"$PUBKEY3\",\"$PUBKEY4\"]" \
-  "p2sh-segwit" | jq -r '.address'
+  "legacy" | jq -r '.address'
