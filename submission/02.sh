@@ -1,4 +1,4 @@
 # Create a native segwit address and get the public key from the address.
 ADDR=$(bitcoin-cli -regtest -rpcwallet=builderswallet getnewaddress "" bech32)
 
-bitcoin-cli -regtest -rpcwallet=builderswallet getaddressinfo "$ADDR" | jq '.pubkey'
+bitcoin-cli -regtest -rpcwallet=builderswallet getaddressinfo "$ADDR" | jq -r '.pubkey'
